@@ -1,47 +1,86 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Get Funding for Your Real Estate Deal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    
 </head>
 <body>
-    <header>
-        <h1>Need Funding for a Flip or Rental?</h1>
-        <p>Connect instantly with private and hard money lenders who close fast.</p>
+    <header class="hero">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <p class="eyebrow">Funding Connection</p>
+            <h1>Need Funding for a Flip or Rental?</h1>
+            <p class="subtitle">Connect instantly with private and hard money lenders who close fast.</p>
+            <div class="hero__badges">
+                <span>Fast decisions</span>
+                <span>Nationwide network</span>
+                <span>No obligation</span>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-        <h2>Submit Your Deal</h2>
-        <p>Tell us about your project and we’ll match you with the best lender from our network.</p>
-
-        <form>
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Email" required />
-            <input type="tel" placeholder="Phone Number" required />
-            <input type="text" placeholder="Property Address" required />
-
-            <select required>
-                <option value="">Deal Type</option>
-                <option>Fix & Flip</option>
-                <option>BRRRR</option>
-                <option>Rental Purchase</option>
-                <option>Bridge Loan</option>
-                <option>Commercial</option>
-            </select>
-
-            <input type="number" placeholder="Loan Amount Needed ($)" required />
-
-            <textarea rows="5" placeholder="Tell us about the deal (condition, ARV, timeline, etc.)"></textarea>
-
-            <button type="submit">Get Matched With a Lender</button>
-        </form>
-    </div>
+    <main class="container">
+        <section class="intro">
+            <div>
+                <h2>Submit Your Deal</h2>
+                <p>Tell us about your project and we’ll match you with the best lender from our network.</p>
+                <ul class="highlights">
+                    <li>Funding options for flips, rentals, and bridge loans</li>
+                    <li>Guidance from specialists who understand real estate investors</li>
+                    <li>Simple process designed to keep your deal moving</li>
+                </ul>
+            </div>
+            <form class="lead-form">
+                <div class="form-grid">
+                    <label>
+                        <span>Your Name</span>
+                        <input type="text" name="name" placeholder="Alex Morgan" required />
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email" placeholder="you@example.com" required />
+                    </label>
+                    <label>
+                        <span>Phone Number</span>
+                        <input type="tel" name="phone" placeholder="(555) 123-4567" required />
+                    </label>
+                    <label>
+                        <span>Property Address</span>
+                        <input type="text" name="address" placeholder="123 Main St, City, ST" required />
+                    </label>
+                    <label>
+                        <span>Deal Type</span>
+                        <select name="dealType" required>
+                            <option value="">Select an option</option>
+                            <option>Fix &amp; Flip</option>
+                            <option>BRRRR</option>
+                            <option>Rental Purchase</option>
+                            <option>Bridge Loan</option>
+                            <option>Commercial</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Loan Amount Needed ($)</span>
+                        <input type="number" name="loanAmount" placeholder="250000" min="0" step="1000" required />
+                    </label>
+                </div>
+                <label class="full-width">
+                    <span>Tell us about the deal</span>
+                    <textarea name="details" rows="4" placeholder="Condition, ARV, timeline, experience, etc."></textarea>
+                </label>
+                <button type="submit">Get Matched With a Lender</button>
+                <p class="form-note">By submitting, you agree to be contacted about funding options for your project.</p>
+            </form>
+        </section>
+    </main>
 
     <footer>
-        © 2025 Funding Connect — We are not a direct lender. We match borrowers with private lenders for business-purpose loans only.
+        <p>© 2025 Funding Connect — We are not a direct lender. We match borrowers with private lenders for business-purpose loans only.</p>
     </footer>
 </body>
 </html>
