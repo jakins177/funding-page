@@ -1,85 +1,276 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f7f7f7;
-    color: #333;
+:root {
+    --bg: #f3f6fb;
+    --card: #ffffff;
+    --primary: #1c64f2;
+    --primary-dark: #144ec0;
+    --text: #0f172a;
+    --muted: #4b5563;
+    --border: #e5e7eb;
+    --accent: linear-gradient(135deg, #4f46e5, #0ea5e9);
+    --shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+    --radius: 14px;
 }
 
-header {
-    position: relative;
-    background: url('https://chatgpt.com/backend-api/estuary/content?id=file_00000000c2cc7230826dc11c74352849&ts=489887&p=fs&cid=1&sig=0ab477018f9e522d33841368af14c9c6d560b06fc8425d19f1d981231584b912&v=0') center/cover no-repeat;
-    padding: 100px 20px;
-    text-align: center;
-    color: white;
+* {
+    box-sizing: border-box;
 }
-header::before {
+
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+}
+
+.hero {
+    position: relative;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 20% 20%, rgba(79, 70, 229, 0.35), transparent 35%),
+        radial-gradient(circle at 80% 0%, rgba(14, 165, 233, 0.35), transparent 40%),
+        #0b1021;
+    overflow: hidden;
+    padding: 80px 20px;
+}
+
+.hero::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.45);
+    inset: 0;
+    background: url('../img/hero.png') center/cover no-repeat;
+    opacity: 0.25;
+    mix-blend-mode: screen;
 }
-header h1, header p {
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(12, 18, 34, 0.9), rgba(12, 18, 34, 0.65));
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    text-align: center;
+    color: #f8fafc;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0 0 10px;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #e2e8f0;
+    margin: 0 auto;
+    max-width: 640px;
+}
+
+.hero__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 22px;
+}
+
+.hero__badges span {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1100px;
+    margin: -80px auto 60px;
+    padding: 0 20px;
     position: relative;
     z-index: 2;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.intro {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
 }
 
-header p {
-    font-size: 1.2rem;
+.intro h2 {
+    margin: 0 0 8px;
+    font-size: 1.8rem;
 }
 
-.container {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 30px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+.intro p {
+    margin: 0 0 12px;
+    color: var(--muted);
 }
 
-h2 {
-    margin-top: 0;
-}
-
-form {
+.highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 10px;
 }
 
-input, select, textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+.highlights li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.highlights li::before {
+    content: "\2713";
+    color: #10b981;
+    font-weight: 700;
+}
+
+.lead-form {
+    background: linear-gradient(135deg, rgba(28, 100, 242, 0.06), rgba(14, 165, 233, 0.08));
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px 16px;
+}
+
+label span {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
     font-size: 1rem;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(28, 100, 242, 0.15);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
 }
 
 button {
-    padding: 14px;
-    background: #0073ff;
+    align-self: flex-start;
+    padding: 14px 18px;
+    background: var(--accent);
     border: none;
     color: white;
-    font-size: 1.1rem;
-    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 12px;
     cursor: pointer;
+    box-shadow: 0 12px 25px rgba(16, 185, 129, 0.25);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 button:hover {
-    background: #0059c9;
+    transform: translateY(-1px);
+    box-shadow: 0 18px 30px rgba(28, 100, 242, 0.25);
+    filter: brightness(1.02);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.form-note {
+    margin: 4px 0 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.full-width {
+    display: block;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    color: #666;
-    font-size: 0.9rem;
+    padding: 24px 16px 32px;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 720px) {
+    .container {
+        margin-top: -60px;
+    }
+
+    .hero {
+        padding: 70px 18px;
+    }
+
+    .intro {
+        padding: 22px;
+    }
+
+    .hero__badges span {
+        width: 100%;
+        text-align: center;
+    }
 }
