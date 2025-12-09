@@ -1,4 +1,9 @@
 <?php
+require __DIR__ . '/vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 $recipient = 'fundingconnect@palmtreesdigital.com';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -18,6 +23,18 @@ $fields = [
 ];
 
 $data = filter_input_array(INPUT_POST, $fields);
+
+if (!is_array($data)) {
+    http_response_code(400);
+    echo 'Invalid submission.';
+    exit;
+}
+
+foreach ($data as $key => $value) {
+    if (is_string($value)) {
+        $data[$key] = trim($value);
+    }
+}
 
 $required = ['name', 'email', 'phone', 'address', 'dealType', 'loanAmount'];
 foreach ($required as $field) {
@@ -45,11 +62,47 @@ $message = "A new funding request has been submitted:\n\n" .
     "Deal Details:\n{$details}\n";
 
 $subject = 'New Funding Request from ' . $data['name'];
-$headers = 'From: no-reply@' . $_SERVER['SERVER_NAME'] . "\r\n" .
-           'Reply-To: ' . $data['email'] . "\r\n" .
-           'X-Mailer: PHP/' . phpversion();
+$fromAddress = getenv('MAIL_FROM_ADDRESS') ?: 'no-reply@' . ($_SERVER['SERVER_NAME'] ?? 'localhost');
+$fromName = getenv('MAIL_FROM_NAME') ?: 'Funding Connect';
 
-$sent = mail($recipient, $subject, $message, $headers);
+$mail = new PHPMailer(true);
+$sent = false;
+
+try {
+    $smtpHost = getenv('SMTP_HOST');
+
+    if (!empty($smtpHost)) {
+        $mail->isSMTP();
+        $mail->Host = $smtpHost;
+        $mail->Port = (int)(getenv('SMTP_PORT') ?: 587);
+        $mail->SMTPAuth = (bool)(getenv('SMTP_USERNAME') || getenv('SMTP_PASSWORD'));
+
+        if ($mail->SMTPAuth) {
+            $mail->Username = getenv('SMTP_USERNAME');
+            $mail->Password = getenv('SMTP_PASSWORD');
+        }
+
+        $encryption = getenv('SMTP_ENCRYPTION') ?: PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->SMTPSecure = $encryption;
+    } else {
+        $mail->isMail();
+    }
+
+    $mail->CharSet = 'UTF-8';
+    $mail->setFrom($fromAddress, $fromName);
+    $mail->addAddress($recipient);
+    $mail->addReplyTo($data['email'], $data['name']);
+
+    $mail->Subject = $subject;
+    $mail->Body = $message;
+    $mail->AltBody = $message;
+    $mail->isHTML(false);
+
+    $sent = $mail->send();
+} catch (Exception $exception) {
+    error_log('PHPMailer error: ' . $exception->getMessage());
+    $sent = false;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
