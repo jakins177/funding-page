@@ -1,6 +1,10 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
+// Load environment variables from .env file
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->safeLoad();
+
 $logFile = __DIR__ . '/fundingconnect.log';
 ini_set('log_errors', '1');
 ini_set('error_log', $logFile);
@@ -84,8 +88,8 @@ $message = "A new funding request has been submitted:\n\n" .
     "Deal Details:\n{$details}\n";
 
 $subject = 'New Funding Request from ' . $data['name'];
-$fromAddress = getenv('MAIL_FROM_ADDRESS') ?: 'no-reply@' . ($_SERVER['SERVER_NAME'] ?? 'localhost');
-$fromName = getenv('MAIL_FROM_NAME') ?: 'Funding Connect';
+$fromAddress = $_ENV['MAIL_FROM_ADDRESS'] ?: 'no-reply@' . ($_SERVER['SERVER_NAME'] ?? 'localhost');
+$fromName = $_ENV['MAIL_FROM_NAME'] ?: 'Funding Connect';
 
 $mail = new PHPMailer(true);
 $sent = false;
@@ -94,23 +98,23 @@ try {
     $mail->isSMTP();
 
     // Enable SMTP debugging only if a specific environment variable is set.
-    if (getenv('SMTP_DEBUG')) {
+    if ($_ENV['SMTP_DEBUG']) {
         $mail->SMTPDebug = 2;
         $mail->Debugoutput = function($str, $level) use ($logContext) {
             $logContext('PHPMailer Debug', ['message' => trim($str)]);
         };
     }
 
-    $mail->Host = getenv('SMTP_HOST') ?: '';
-    $mail->Port = (int)(getenv('SMTP_PORT') ?: 587);
-    $mail->SMTPAuth = (bool)(getenv('SMTP_USERNAME') || getenv('SMTP_PASSWORD'));
+    $mail->Host = $_ENV['SMTP_HOST'] ?: '';
+    $mail->Port = (int)($_ENV['SMTP_PORT'] ?: 587);
+    $mail->SMTPAuth = (bool)($_ENV['SMTP_USERNAME'] || $_ENV['SMTP_PASSWORD']);
 
     if ($mail->SMTPAuth) {
-        $mail->Username = getenv('SMTP_USERNAME');
-        $mail->Password = getenv('SMTP_PASSWORD');
+        $mail->Username = $_ENV['SMTP_USERNAME'];
+        $mail->Password = $_ENV['SMTP_PASSWORD'];
     }
 
-    $mail->SMTPSecure = getenv('SMTP_ENCRYPTION') ?: PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->SMTPSecure = $_ENV['SMTP_ENCRYPTION'] ?: PHPMailer::ENCRYPTION_STARTTLS;
 
     if (empty($mail->Host)) {
         throw new Exception('Email service is not configured; SMTP host is missing.');
