@@ -93,31 +93,33 @@ $sent = false;
 try {
     $smtpHost = getenv('SMTP_HOST');
 
-    if (!empty($smtpHost)) {
-        $mail->isSMTP();
-        $mail->Host = $smtpHost;
-        $mail->Port = (int)(getenv('SMTP_PORT') ?: 587);
-        $mail->SMTPAuth = (bool)(getenv('SMTP_USERNAME') || getenv('SMTP_PASSWORD'));
-
-        if ($mail->SMTPAuth) {
-            $mail->Username = getenv('SMTP_USERNAME');
-            $mail->Password = getenv('SMTP_PASSWORD');
-        }
-
-        $encryption = getenv('SMTP_ENCRYPTION') ?: PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->SMTPSecure = $encryption;
-
-        $logContext('Configured SMTP transport', [
-            'host' => $mail->Host,
-            'port' => $mail->Port,
-            'auth' => $mail->SMTPAuth,
-            'encryption' => $mail->SMTPSecure,
-            'username_set' => !empty($mail->Username),
-        ]);
-    } else {
-        $mail->isMail();
-        $logContext('Configured mail() transport');
+    if (empty($smtpHost)) {
+        http_response_code(500);
+        echo 'Email service is not configured.';
+        $logContext('SMTP host missing; aborting send');
+        exit;
     }
+
+    $mail->isSMTP();
+    $mail->Host = $smtpHost;
+    $mail->Port = (int)(getenv('SMTP_PORT') ?: 587);
+    $mail->SMTPAuth = (bool)(getenv('SMTP_USERNAME') || getenv('SMTP_PASSWORD'));
+
+    if ($mail->SMTPAuth) {
+        $mail->Username = getenv('SMTP_USERNAME');
+        $mail->Password = getenv('SMTP_PASSWORD');
+    }
+
+    $encryption = getenv('SMTP_ENCRYPTION') ?: PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->SMTPSecure = $encryption;
+
+    $logContext('Configured SMTP transport', [
+        'host' => $mail->Host,
+        'port' => $mail->Port,
+        'auth' => $mail->SMTPAuth,
+        'encryption' => $mail->SMTPSecure,
+        'username_set' => !empty($mail->Username),
+    ]);
 
     $mail->CharSet = 'UTF-8';
     $mail->setFrom($fromAddress, $fromName);
