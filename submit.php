@@ -91,17 +91,17 @@ $mail = new PHPMailer(true);
 $sent = false;
 
 try {
-    $smtpHost = getenv('SMTP_HOST');
+    $mail->isSMTP();
 
-    if (empty($smtpHost)) {
-        http_response_code(500);
-        echo 'Email service is not configured.';
-        $logContext('SMTP host missing; aborting send');
-        exit;
+    // Enable SMTP debugging only if a specific environment variable is set.
+    if (getenv('SMTP_DEBUG')) {
+        $mail->SMTPDebug = 2;
+        $mail->Debugoutput = function($str, $level) use ($logContext) {
+            $logContext('PHPMailer Debug', ['message' => trim($str)]);
+        };
     }
 
-    $mail->isSMTP();
-    $mail->Host = $smtpHost;
+    $mail->Host = getenv('SMTP_HOST') ?: '';
     $mail->Port = (int)(getenv('SMTP_PORT') ?: 587);
     $mail->SMTPAuth = (bool)(getenv('SMTP_USERNAME') || getenv('SMTP_PASSWORD'));
 
@@ -110,8 +110,11 @@ try {
         $mail->Password = getenv('SMTP_PASSWORD');
     }
 
-    $encryption = getenv('SMTP_ENCRYPTION') ?: PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->SMTPSecure = $encryption;
+    $mail->SMTPSecure = getenv('SMTP_ENCRYPTION') ?: PHPMailer::ENCRYPTION_STARTTLS;
+
+    if (empty($mail->Host)) {
+        throw new Exception('Email service is not configured; SMTP host is missing.');
+    }
 
     $logContext('Configured SMTP transport', [
         'host' => $mail->Host,
@@ -128,7 +131,6 @@ try {
 
     $mail->Subject = $subject;
     $mail->Body = $message;
-    $mail->AltBody = $message;
     $mail->isHTML(false);
 
     $sent = $mail->send();
@@ -142,7 +144,7 @@ try {
 } catch (Exception $exception) {
     $logContext('PHPMailer error', ['message' => $exception->getMessage()]);
     $sent = false;
-    http_response_code(500);
+    // Do not set a 500 status code here, so the frontend shows the result page.
 }
 ?>
 <!DOCTYPE html>
