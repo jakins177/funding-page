@@ -150,6 +150,11 @@ try {
     $sent = false;
     // Do not set a 500 status code here, so the frontend shows the result page.
 }
+
+if ($sent) {
+    header("Location: thank-you.html");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
