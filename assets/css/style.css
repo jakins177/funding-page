@@ -117,6 +117,36 @@ a {
     z-index: 2;
 }
 
+.disclosure {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 18px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.disclosure__label {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    background: rgba(28, 100, 242, 0.08);
+    color: var(--primary-dark);
+    font-weight: 700;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+}
+
+.disclosure p {
+    margin: 0;
+}
+
 .intro {
     background: var(--card);
     border-radius: var(--radius);
@@ -267,6 +297,15 @@ footer {
 
     .intro {
         padding: 22px;
+    }
+
+    .disclosure {
+        font-size: 0.9rem;
+        flex-direction: column;
+    }
+
+    .disclosure__label {
+        margin-bottom: 4px;
     }
 
     .hero__badges span {
