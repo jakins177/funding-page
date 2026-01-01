@@ -40,6 +40,8 @@ $fields = [
     'email' => FILTER_VALIDATE_EMAIL,
     'phone' => FILTER_SANITIZE_FULL_SPECIAL_CHARS,
     'address' => FILTER_SANITIZE_FULL_SPECIAL_CHARS,
+    'city' => FILTER_SANITIZE_FULL_SPECIAL_CHARS,
+    'state' => FILTER_SANITIZE_FULL_SPECIAL_CHARS,
     'dealType' => FILTER_SANITIZE_FULL_SPECIAL_CHARS,
     'loanAmount' => FILTER_SANITIZE_NUMBER_INT,
     'details' => FILTER_SANITIZE_FULL_SPECIAL_CHARS,
@@ -60,7 +62,7 @@ foreach ($data as $key => $value) {
     }
 }
 
-$required = ['name', 'email', 'phone', 'address', 'dealType', 'loanAmount'];
+$required = ['name', 'email', 'phone', 'address', 'city', 'state', 'dealType', 'loanAmount'];
 foreach ($required as $field) {
     if (empty($data[$field])) {
         http_response_code(400);
@@ -83,6 +85,8 @@ $message = "A new funding request has been submitted:\n\n" .
     "Email: {$data['email']}\n" .
     "Phone: {$data['phone']}\n" .
     "Property Address: {$data['address']}\n" .
+    "City: {$data['city']}\n" .
+    "State: {$data['state']}\n" .
     "Deal Type: {$data['dealType']}\n" .
     "Loan Amount: {$data['loanAmount']}\n\n" .
     "Deal Details:\n{$details}\n";
