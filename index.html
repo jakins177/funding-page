@@ -92,7 +92,7 @@
                     <p>Use the embedded assistant to outline your deal and get matched faster.</p>
                 </div>
                 <div class="chat-embed">
-                    <flowise-fullchatbot></flowise-fullchatbot>
+                    <iframe src="https://agentbuilder.palmtreesai.com/embed/a830e00b-bf36-4df9-b66b-cbd69d2491ea" width="100%" height="600px" style="border:1px solid #e5e7eb; border-radius: 12px;"></iframe>
                 </div>
             </div>
         </section>
@@ -115,18 +115,5 @@
     <footer>
         <p>© 2025 Funding Connect — We are not a direct lender. We match borrowers with private lenders for business-purpose loans only.</p>
     </footer>
-    <script type="module">
-        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
-
-        Chatbot.initFull({
-            chatflowid: "REPLACE_WITH_AGENT_ID",
-            apiHost: "https://agentbuilder.palmtreesai.com",
-            theme: {
-                button: {
-                    backgroundColor: "#000000"
-                }
-            }
-        });
-    </script>
 </body>
 </html>
