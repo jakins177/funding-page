@@ -28,7 +28,12 @@ const stateMap: Record<string, { slug: string; name: string; code: string }> = {
   ga: { slug: "georgia", name: "Georgia", code: "GA" },
   georgia: { slug: "georgia", name: "Georgia", code: "GA" },
   nc: { slug: "north-carolina", name: "North Carolina", code: "NC" },
-  "north-carolina": { slug: "north-carolina", name: "North Carolina", code: "NC" }
+  "north-carolina": { slug: "north-carolina", name: "North Carolina", code: "NC" },
+  "ny": { slug: "new-york", name: "New York", code: "NY" },
+  "il": { slug: "illinois", name: "Illinois", code: "IL" },
+  "oh": { slug: "ohio", name: "Ohio", code: "OH" },
+  "pa": { slug: "pennsylvania", name: "Pennsylvania", code: "PA" },
+  "nj": { slug: "new-jersey", name: "New Jersey", code: "NJ" }
 };
 
 const dealTypeMap: Record<string, { slug: string; label: string; summary: string }> = {
