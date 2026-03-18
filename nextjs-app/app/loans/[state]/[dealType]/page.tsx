@@ -94,7 +94,7 @@ export function generateMetadata({ params }: { params: RouteParams }): Metadata 
   }
 
   return {
-    title: `${pageData.deal.label} in ${pageData.state.name} | New Silver Programs`,
+    title: `${pageData.deal.label} in ${pageData.state.name} | Funding Connect`,
     description: pageData.content.marketContext,
     alternates: {
       canonical: `/loans/${pageData.state.slug}/${pageData.deal.slug}`
@@ -116,7 +116,7 @@ export default function LoanPage({ params }: { params: RouteParams }) {
     "@context": "https://schema.org",
     "@type": "FinancialService",
     name: "Funding Connect",
-    description: `${deal.label} in ${state.name} with New Silver program highlights and fast investor funding guidance.`,
+    description: `${deal.label} in ${state.name} with top partner program highlights and fast investor funding guidance.`,
     areaServed: {
       "@type": "State",
       name: state.name
@@ -130,7 +130,7 @@ export default function LoanPage({ params }: { params: RouteParams }) {
     ],
     provider: {
       "@type": "Organization",
-      name: "New Silver"
+      name: "Funding Connect Partners"
     },
     offers: {
       "@type": "Offer",
@@ -196,7 +196,7 @@ export default function LoanPage({ params }: { params: RouteParams }) {
             </div>
 
             <p className={styles.lede}>
-              New Silver loan specifics are positioned for serious operators who need to move quickly, present a
+              Our partner loan specifics are positioned for serious operators who need to move quickly, present a
               coherent deal story, and keep capital aligned with the exit. That makes the program especially relevant
               for investors balancing acquisition pace with rehab, lease-up, or stabilization milestones.
             </p>
@@ -239,7 +239,7 @@ export default function LoanPage({ params }: { params: RouteParams }) {
                 </div>
                 <div className={styles.checkItem}>
                   <span className={styles.checkDot} />
-                  <span>Visible New Silver value points presented before the qualification conversation.</span>
+                  <span>Visible partner value points presented before the qualification conversation.</span>
                 </div>
                 <div className={styles.checkItem}>
                   <span className={styles.checkDot} />
