@@ -149,7 +149,7 @@ export default function LoanPage({ params }: { params: RouteParams }) {
 
       <header className={styles.hero}>
         <div className={styles.heroInner}>
-          <div className={styles.eyebrow}>Funding Connect • Powered by New Silver loan programs</div>
+          <div className={styles.eyebrow}>Funding Connect • Powered by our partner's loan programs</div>
           <h1 className={styles.heroTitle}>{heroTitle}</h1>
           <p className={styles.heroSubtitle}>
             {deal.summary} The page is tailored to {state.name} investors, with localized market context,
@@ -216,7 +216,7 @@ export default function LoanPage({ params }: { params: RouteParams }) {
               <p className={styles.sectionTag}>Embedded Funding Agent</p>
               <h2 className={styles.sectionTitle}>Discuss your deal live</h2>
               <p className={styles.lede}>
-                Use the Palm Trees AI agent below to walk through the property, timeline, budget, and exit plan. It
+                Use Our AI agent below to walk through the property, timeline, budget, and exit plan. It
                 stays embedded on the page so visitors can move from research to qualification without leaving the
                 experience.
               </p>
