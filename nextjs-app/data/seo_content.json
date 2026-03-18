@@ -1,0 +1,327 @@
+{
+  "florida-fix-and-flip": {
+    "marketContext": "Florida fix-and-flip investors benefit from year-round buyer demand, migration-driven population growth, and submarkets where cosmetic rehabs still trade quickly. Success often comes from pricing insurance, wind mitigation, and permit timing correctly before carrying costs eat into margin.",
+    "faqs": [
+      {
+        "question": "Why do Florida fix-and-flip borrowers use bridge financing?",
+        "answer": "Bridge financing lets investors close quickly, fund renovations, and resell before long-term financing would make sense."
+      },
+      {
+        "question": "What should Florida flippers underwrite carefully?",
+        "answer": "Insurance premiums, roof and HVAC condition, and municipal permit timelines can materially affect both rehab budgets and hold periods."
+      }
+    ]
+  },
+  "florida-brrrr": {
+    "marketContext": "Florida BRRRR investors target rental corridors with strong in-migration and seasonal overflow that supports long-term occupancy after stabilization. The best executions usually pair fast acquisition capital with a refinance plan that accounts for taxes, insurance, and post-rehab rent comps.",
+    "faqs": [
+      {
+        "question": "Is BRRRR viable in Florida's higher-cost insurance environment?",
+        "answer": "Yes, but the refinance only works if projected rents comfortably absorb insurance, taxes, and maintenance after rehab."
+      },
+      {
+        "question": "What properties work best for Florida BRRRR deals?",
+        "answer": "Single-family homes and small multifamily assets in durable workforce rental markets tend to provide the clearest refinance path."
+      }
+    ]
+  },
+  "florida-hard-money": {
+    "marketContext": "Florida hard money demand stays elevated because competitive deals often require fast closings in coastal metros and high-growth inland markets alike. Investors use hard money to stay nimble while navigating inspection-heavy assets, title issues, or properties that conventional lenders will not touch.",
+    "faqs": [
+      {
+        "question": "When is hard money most useful in Florida?",
+        "answer": "It is especially useful when a property needs repairs, the closing window is short, or borrower speed matters more than conventional pricing."
+      },
+      {
+        "question": "Can Florida hard money loans cover renovations?",
+        "answer": "Many lenders structure draws for rehab scope, allowing investors to preserve liquidity while improving the property."
+      }
+    ]
+  },
+  "florida-rental-purchase": {
+    "marketContext": "Florida rental purchase loans are attractive for investors buying stabilized homes in markets with steady population inflows and resilient tenant demand. Winning operators focus on cash-flow durability by balancing acquisition speed with disciplined underwriting of taxes, HOA rules, and lease-ready condition.",
+    "faqs": [
+      {
+        "question": "What matters most on a Florida rental purchase loan?",
+        "answer": "Lenders will look closely at property condition, projected rent coverage, and whether the asset can support the exit strategy."
+      },
+      {
+        "question": "Do Florida rentals need to be fully turnkey?",
+        "answer": "Not always, but properties that need meaningful work may fit bridge or rehab financing better than a straight rental purchase product."
+      }
+    ]
+  },
+  "florida-commercial": {
+    "marketContext": "Florida commercial real estate investors pursue bridge debt for mixed-use, retail, and multifamily repositioning in markets shaped by tourism, logistics, and inbound migration. Strong deals typically show a clear path to improved occupancy or income rather than relying purely on appreciation.",
+    "faqs": [
+      {
+        "question": "What commercial assets are active in Florida?",
+        "answer": "Small balance multifamily, neighborhood retail, and select mixed-use properties often draw investor attention across growth corridors."
+      },
+      {
+        "question": "How should Florida commercial borrowers present their deal?",
+        "answer": "A concise business plan, realistic rent assumptions, and a documented improvement strategy usually strengthen the loan request."
+      }
+    ]
+  },
+  "texas-fix-and-flip": {
+    "marketContext": "Texas fix-and-flip lending remains active because major metros offer large housing stock, strong job formation, and submarkets where dated homes can still be repositioned efficiently. Investors who underwrite foundation risk, property taxes, and neighborhood-specific resale velocity tend to outperform.",
+    "faqs": [
+      {
+        "question": "Why is speed important for Texas flips?",
+        "answer": "Well-priced deals move fast in many Texas markets, so bridge capital helps investors secure inventory before competing buyers do."
+      },
+      {
+        "question": "What costs can derail a Texas flip?",
+        "answer": "Foundation repairs, rising tax bills, and extended days on market can compress profit if they are missed early."
+      }
+    ]
+  },
+  "texas-brrrr": {
+    "marketContext": "Texas BRRRR investors often benefit from scalable suburban rental demand and a broad pool of value-add inventory across expanding metro areas. The refinance stage works best when rehab scope is tight, rent comps are current, and tax assessments are modeled conservatively.",
+    "faqs": [
+      {
+        "question": "Is Texas a strong BRRRR market?",
+        "answer": "It can be, especially in areas with sustained population and employer growth that support occupancy after renovation."
+      },
+      {
+        "question": "What should investors validate before the refinance?",
+        "answer": "Updated appraisals, achievable rents, and the effect of local taxes on DSCR should all be confirmed before takeout financing."
+      }
+    ]
+  },
+  "texas-hard-money": {
+    "marketContext": "Texas hard money loans are commonly used for auctions, distressed acquisitions, and fast negotiations where certainty of close matters. Borrowers gain flexibility for properties that need repairs, title cleanup, or a capital structure conventional banks will not underwrite quickly.",
+    "faqs": [
+      {
+        "question": "Who uses hard money in Texas?",
+        "answer": "House flippers, landlords acquiring distressed inventory, and commercial borrowers needing short-term execution all use it."
+      },
+      {
+        "question": "Can Texas hard money help with off-market deals?",
+        "answer": "Yes, short-term lenders are often selected because they can move faster than traditional institutions on negotiated opportunities."
+      }
+    ]
+  },
+  "texas-rental-purchase": {
+    "marketContext": "Texas rental purchase financing supports investors buying income property in metros where employment growth helps sustain tenant demand. The cleanest transactions usually involve lease-ready assets, durable submarket rents, and an exit plan built around long-term hold economics.",
+    "faqs": [
+      {
+        "question": "What properties fit Texas rental purchase loans best?",
+        "answer": "Stabilized single-family rentals and small multifamily properties with clear rent comps are often the strongest candidates."
+      },
+      {
+        "question": "Why do lenders care about taxes in Texas rental deals?",
+        "answer": "Because property taxes can materially impact net cash flow and the investor's ability to support long-term debt."
+      }
+    ]
+  },
+  "texas-commercial": {
+    "marketContext": "Texas commercial investors regularly seek bridge debt for warehouse, flex, retail, and multifamily opportunities tied to business expansion and regional migration. Capital tends to flow to deals with visible demand drivers, credible sponsors, and a defined stabilization timeline.",
+    "faqs": [
+      {
+        "question": "What makes a Texas commercial bridge deal financeable?",
+        "answer": "Lenders want a believable value-creation story, market-backed rent assumptions, and enough liquidity to execute the plan."
+      },
+      {
+        "question": "Are owner-occupied properties treated the same as investment assets?",
+        "answer": "No, underwriting and loan structure may differ depending on occupancy, business cash flow, and property use."
+      }
+    ]
+  },
+  "california-fix-and-flip": {
+    "marketContext": "California fix-and-flip investors operate in supply-constrained markets where quality renovations can command strong resale premiums despite higher entry costs. Margin protection depends on disciplined acquisition, contractor control, and a realistic hold timeline in cities with strict permitting and labor expenses.",
+    "faqs": [
+      {
+        "question": "Why do California flippers rely on specialized lenders?",
+        "answer": "Higher purchase prices and renovation budgets often require a lender comfortable with speed, leverage, and rehab complexity."
+      },
+      {
+        "question": "What should California investors watch most closely?",
+        "answer": "Permit timing, contractor availability, and neighborhood-specific resale demand can all determine whether the flip pencils."
+      }
+    ]
+  },
+  "california-brrrr": {
+    "marketContext": "California BRRRR strategies demand precision because acquisition basis, rehab dollars, and refinance proceeds must align in a high-cost environment. Investors usually focus on pockets where long-term housing demand, constrained supply, and durable rents can justify the capital stack.",
+    "faqs": [
+      {
+        "question": "Can BRRRR work in California's expensive markets?",
+        "answer": "Yes, but it requires tighter buying discipline and a refinance assumption grounded in actual neighborhood rents and appraisals."
+      },
+      {
+        "question": "What assets are common for California BRRRR investors?",
+        "answer": "Small multifamily and under-improved single-family rentals in strong employment corridors are common targets."
+      }
+    ]
+  },
+  "california-hard-money": {
+    "marketContext": "California hard money remains a core tool for investors competing on speed in expensive, highly negotiated markets. It is often used for non-warrantable properties, distressed situations, or transactions where a borrower needs flexible underwriting around asset potential rather than current condition.",
+    "faqs": [
+      {
+        "question": "Why is hard money common in California?",
+        "answer": "Because borrowers often need certainty and rapid execution in markets where attractive deals are highly competitive."
+      },
+      {
+        "question": "Does hard money only apply to fix-and-flips?",
+        "answer": "No, investors also use it for short-term holds, refinance gaps, and value-add commercial or rental acquisitions."
+      }
+    ]
+  },
+  "california-rental-purchase": {
+    "marketContext": "California rental purchase loans appeal to investors acquiring stabilized properties in markets where long-term housing demand supports premium rents. Professional underwriting centers on tenant quality, operating expense realism, and choosing neighborhoods where cash flow resilience matters more than headline appreciation.",
+    "faqs": [
+      {
+        "question": "What should California rental investors prioritize?",
+        "answer": "They should prioritize durable rent demand, realistic maintenance reserves, and an acquisition basis that still supports long-term returns."
+      },
+      {
+        "question": "Are turnkey rentals easier to finance in California?",
+        "answer": "Generally yes, because stabilized condition and documented rents reduce execution risk for the lender."
+      }
+    ]
+  },
+  "california-commercial": {
+    "marketContext": "California commercial borrowers often seek transitional capital for mixed-use, multifamily, retail, and light industrial properties with a defined repositioning story. Lenders respond best when sponsors can show operational experience, clean entitlement assumptions, and an exit beyond simple market appreciation.",
+    "faqs": [
+      {
+        "question": "What do lenders want in a California commercial request?",
+        "answer": "They typically want a clear business plan, sponsor experience, and a timetable for improving income or occupancy."
+      },
+      {
+        "question": "Why is local market knowledge important in California commercial deals?",
+        "answer": "Submarket performance can vary sharply, so rent growth and exit assumptions need to be localized and defensible."
+      }
+    ]
+  },
+  "georgia-fix-and-flip": {
+    "marketContext": "Georgia fix-and-flip investors benefit from metro growth, relative affordability, and a wide spread of housing stock that supports rehab-driven value creation. The strongest projects usually pair fast financing with careful underwriting of neighborhood turnover, contractor pace, and resale demand.",
+    "faqs": [
+      {
+        "question": "Why is Georgia attractive for fix-and-flip investing?",
+        "answer": "Many investors like the combination of active buyer demand, attainable acquisition prices, and multiple submarkets with renovation upside."
+      },
+      {
+        "question": "What can slow a Georgia flip?",
+        "answer": "Contractor delays, unexpected systems work, and weak resale positioning can extend the hold and reduce returns."
+      }
+    ]
+  },
+  "georgia-brrrr": {
+    "marketContext": "Georgia BRRRR deals often work well in rental-heavy neighborhoods where renovated homes can refinance into stable cash-flow assets. Investors who track realistic rent comps, maintenance reserves, and neighborhood-specific vacancy trends usually build the most repeatable model.",
+    "faqs": [
+      {
+        "question": "Is BRRRR scalable in Georgia?",
+        "answer": "It can be scalable when investors buy at the right basis and refinance into long-term debt supported by actual rents."
+      },
+      {
+        "question": "What makes a Georgia BRRRR refinance smoother?",
+        "answer": "A completed rehab, documented market rents, and a property in lease-ready condition generally improve the takeout process."
+      }
+    ]
+  },
+  "georgia-hard-money": {
+    "marketContext": "Georgia hard money financing gives investors a faster way to secure distressed or value-add assets before conventional lenders can react. It is especially useful for borrowers who need renovation funds, flexible collateral review, or a short-term bridge into a refinance or sale.",
+    "faqs": [
+      {
+        "question": "When do Georgia investors choose hard money?",
+        "answer": "They typically choose it when timing is tight, the property needs work, or the business plan is too transitional for a bank."
+      },
+      {
+        "question": "Can hard money support both purchase and rehab in Georgia?",
+        "answer": "Yes, many programs combine acquisition financing with construction draws tied to verified renovation progress."
+      }
+    ]
+  },
+  "georgia-rental-purchase": {
+    "marketContext": "Georgia rental purchase lending supports investors building portfolios in markets with steady household formation and landlord-friendly operating conditions. Deals underwrite best when the property is rent-ready, expenses are well understood, and the investor's hold strategy is clear from day one.",
+    "faqs": [
+      {
+        "question": "What properties fit Georgia rental purchase financing?",
+        "answer": "Lease-ready single-family rentals and smaller multifamily assets with dependable comps are common fits."
+      },
+      {
+        "question": "Do lenders look at rent history on Georgia rentals?",
+        "answer": "Yes, existing leases or strong market rent evidence can support underwriting and help validate the asset's income potential."
+      }
+    ]
+  },
+  "georgia-commercial": {
+    "marketContext": "Georgia commercial real estate borrowers often pursue bridge loans for neighborhood retail, multifamily, office repositioning, and industrial infill opportunities. A persuasive capital request usually demonstrates local demand, sponsor execution experience, and a practical path to stabilization.",
+    "faqs": [
+      {
+        "question": "What helps a Georgia commercial loan request stand out?",
+        "answer": "A clearly defined use of proceeds, realistic leasing assumptions, and a sponsor with relevant operating experience help materially."
+      },
+      {
+        "question": "Are transitional properties financeable in Georgia?",
+        "answer": "Yes, if the borrower can show how vacancy, deferred maintenance, or management issues will be corrected on a clear timeline."
+      }
+    ]
+  },
+  "north-carolina-fix-and-flip": {
+    "marketContext": "North Carolina fix-and-flip investors find opportunity in growing metros and secondary cities where renovated homes still attract broad end-buyer demand. Efficient projects usually depend on quick closings, disciplined scopes of work, and close attention to local permit and resale timelines.",
+    "faqs": [
+      {
+        "question": "Why do investors target fix-and-flips in North Carolina?",
+        "answer": "Population growth and diverse housing stock can create strong opportunities for value-add resales in the right submarkets."
+      },
+      {
+        "question": "What should North Carolina flippers budget carefully?",
+        "answer": "Investors should budget for contractor labor, permit timing, and any deferred maintenance that could delay listing."
+      }
+    ]
+  },
+  "north-carolina-brrrr": {
+    "marketContext": "North Carolina BRRRR strategies benefit from rental demand tied to university, healthcare, and business growth across several markets. The model is strongest when investors buy below replacement cost, execute a clean rehab, and refinance against well-supported post-repair rents.",
+    "faqs": [
+      {
+        "question": "What supports BRRRR demand in North Carolina?",
+        "answer": "Steady inbound migration and diverse employment centers can support occupancy and refinance viability after renovation."
+      },
+      {
+        "question": "How do investors de-risk a North Carolina BRRRR exit?",
+        "answer": "They verify rents early, keep the rehab plan focused, and avoid over-improving beyond neighborhood standards."
+      }
+    ]
+  },
+  "north-carolina-hard-money": {
+    "marketContext": "North Carolina hard money lenders fill the gap when investors need fast capital for distressed homes, short sale opportunities, or transitional rental assets. The product is valuable when the asset story is strong but conventional financing would move too slowly or reject the property's current condition.",
+    "faqs": [
+      {
+        "question": "When is hard money a fit in North Carolina?",
+        "answer": "It is a fit when acquisition speed, renovation funding, or flexible collateral underwriting are more important than long-term loan pricing."
+      },
+      {
+        "question": "Do North Carolina hard money lenders require a detailed plan?",
+        "answer": "Yes, most lenders want a defined scope, timeline, and exit strategy before committing capital."
+      }
+    ]
+  },
+  "north-carolina-rental-purchase": {
+    "marketContext": "North Carolina rental purchase loans are popular with investors acquiring stabilized homes in expanding metro and suburban corridors. Strong executions emphasize predictable rents, sensible maintenance assumptions, and neighborhoods where tenant demand remains durable beyond short-term market cycles.",
+    "faqs": [
+      {
+        "question": "What qualifies as a strong North Carolina rental purchase deal?",
+        "answer": "A lease-ready property with documented rent support, stable neighborhood demand, and a clear long-term hold rationale is typically strong."
+      },
+      {
+        "question": "Can investors buy vacant properties with rental purchase financing?",
+        "answer": "Yes, depending on lender guidelines, but fully stabilized assets are usually simpler to finance than properties needing heavy work."
+      }
+    ]
+  },
+  "north-carolina-commercial": {
+    "marketContext": "North Carolina commercial borrowers use bridge financing for multifamily, industrial, office, and mixed-use assets tied to regional growth and repositioning plays. Lenders favor deals where the sponsor can clearly explain tenant demand, lease-up assumptions, and the operational plan after closing.",
+    "faqs": [
+      {
+        "question": "What commercial properties are active in North Carolina?",
+        "answer": "Small multifamily, flex industrial, and selective mixed-use assets often draw bridge financing interest in growth markets."
+      },
+      {
+        "question": "How should a borrower frame a North Carolina commercial opportunity?",
+        "answer": "The request should connect local demand drivers to a specific value-add plan, timeline, and exit strategy."
+      }
+    ]
+  }
+}
