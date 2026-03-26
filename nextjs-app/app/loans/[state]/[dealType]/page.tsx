@@ -304,34 +304,6 @@ export default function LoanPage({ params }: { params: RouteParams }) {
           <aside className={styles.sidebar}>
             
             <section className={`${styles.panel} ${styles.sidebarPanel}`}>
-              <p className={styles.sectionTag}>Limited Time Offer</p>
-              <h2 className={styles.sectionTitle}>Get $350 Cash Bonus</h2>
-              <p className={styles.lede}>
-                Apply through our partner link and receive a <strong>$350 cash bonus</strong> at closing! 
-                This offer is available for qualified investors.
-              </p>
-              <a 
-                href="https://bit.ly/kiavi-real-estate-funding" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={styles.iframe}
-                style={{
-                  display: 'block',
-                  backgroundColor: '#22c55e',
-                  color: 'white',
-                  padding: '16px 24px',
-                  borderRadius: '8px',
-                  textAlign: 'center',
-                  fontWeight: 'bold',
-                  textDecoration: 'none',
-                  marginTop: '16px'
-                }}
-              >
-                Apply Now + Get $350 Bonus
-              </a>
-            </section>
-
-<section className={`${styles.panel} ${styles.sidebarPanel}`}>
               <p className={styles.sectionTag}>Embedded Funding Agent</p>
               <h2 className={styles.sectionTitle}>Discuss your deal live</h2>
               <p className={styles.lede}>
@@ -339,6 +311,27 @@ export default function LoanPage({ params }: { params: RouteParams }) {
                 stays embedded on the page so visitors can move from research to qualification without leaving the
                 experience.
               </p>
+              <p style={{ marginBottom: '12px', fontSize: '13px' }}>
+                <strong>🎁 Limited Time:</strong> Qualifying investors receive a <strong>$350 cash bonus</strong> at closing!
+              </p>
+              <a 
+                href="https://bit.ly/kiavi-real-estate-funding" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-block',
+                  backgroundColor: '#22c55e',
+                  color: 'white',
+                  padding: '8px 16px',
+                  borderRadius: '4px',
+                  textDecoration: 'none',
+                  fontSize: '13px',
+                  fontWeight: 'bold',
+                  marginBottom: '12px'
+                }}
+              >
+                Get $350 Bonus
+              </a>
               <div className={styles.iframeWrap}>
                 <iframe
                   className={styles.iframe}
