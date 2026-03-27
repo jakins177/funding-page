@@ -1,0 +1,7 @@
+import json
+with open('projects/funding/repo/nextjs-app/package.json', 'r') as f:
+    pkg = json.load(f)
+if 'gray-matter' not in pkg.get('dependencies', {}):
+    print("needs_install")
+else:
+    print("ready")
