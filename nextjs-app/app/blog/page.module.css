@@ -21,12 +21,12 @@
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  color: #111827;
+  color: #ffffff;
 }
 
 .heroSubtitle {
   font-size: 1.25rem;
-  color: #4b5563;
+  color: #d1d5db;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -38,13 +38,13 @@
 }
 
 .card {
-  border: 1px solid #e5e7eb;
+  border: 1px solid #374151;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
-  background: white;
+  background: #1f2937;
   text-decoration: none;
   color: inherit;
 }
@@ -69,7 +69,7 @@
 
 .cardDate {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: #9ca3af;
   margin-bottom: 0.5rem;
 }
 
@@ -77,12 +77,12 @@
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #111827;
+  color: #ffffff;
 }
 
 .cardExcerpt {
   font-size: 1rem;
-  color: #4b5563;
+  color: #d1d5db;
   margin-bottom: 1.5rem;
   flex: 1;
 }
@@ -109,13 +109,13 @@
 .postTitle {
   font-size: 3rem;
   font-weight: 800;
-  color: #111827;
+  color: #ffffff;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
 .postMeta {
-  color: #6b7280;
+  color: #9ca3af;
   font-size: 1rem;
 }
 
@@ -131,13 +131,13 @@
 .postContent {
   font-size: 1.125rem;
   line-height: 1.8;
-  color: #374151;
+  color: #e5e7eb;
 }
 
 .postContent h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #111827;
+  color: #ffffff;
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
@@ -145,7 +145,7 @@
 .postContent h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #111827;
+  color: #ffffff;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
